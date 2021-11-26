@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">BaricharaTuristica</string>
+
+    <string name="bioparque">BIOPARQUE MONCORA</string>
+    <string name="bioparque_description_pg1">El bioparque, con una superficie de seis hectáreas, sirve como centro de restauración ecológica y educación ambiental. Se encuentra al noreste de la ermita de Santa Bárbara. Ha sido promovido con éxito por la Asociación Aquileo Parra-Amigos de Barichara como el principal componente de la zona verde que rodea el centro de la ciudad.  </string>
+
+
 </resources>
+
+

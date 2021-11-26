@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BaricharaTuristica">
         <activity
+            android:name=".MainActivity_Bioparque"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
