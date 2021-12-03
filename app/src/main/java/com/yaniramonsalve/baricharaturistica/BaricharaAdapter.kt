@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 
 class BaricharaAdapter(
     private val baricharaList: ArrayList<BaricharaItem>
@@ -33,6 +34,7 @@ class BaricharaAdapter(
         fun bind(barichara : BaricharaItem){
             nameTextView.text = barichara.name
             descriptionTextView.text = barichara.introduction
+            Picasso.get().load(barichara.urlPicture).into(pictureImageView);
 
         }
 

@@ -1,9 +1,10 @@
 package com.yaniramonsalve.baricharaturistica
 
 data class BaricharaItem(
-    val urlFoto: String,
+    val urlPicture: String,
     val name: String,
     val introduction: String,
-    val valoration : String,
+    val valoration: String,
 
-)
+
+    )
