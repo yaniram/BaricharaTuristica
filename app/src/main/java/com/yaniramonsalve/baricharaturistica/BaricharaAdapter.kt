@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 
 class BaricharaAdapter(
-    private val baricharaList: ArrayList<BaricharaItem>
+    private val baricharaList: ArrayList<BaricharaItemItem>
     ) : RecyclerView.Adapter<BaricharaAdapter.BaricharaViewHolder>()  {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaricharaViewHolder {
@@ -31,7 +31,7 @@ class BaricharaAdapter(
         private var descriptionTextView: TextView = itemView.findViewById(R.id.description_place_view)
         private var pictureImageView: ImageView = itemView.findViewById(R.id.picture_image_view)
 
-        fun bind(barichara : BaricharaItem){
+        fun bind(barichara : BaricharaItemItem){
             nameTextView.text = barichara.name
             descriptionTextView.text = barichara.introduction
             Picasso.get().load(barichara.urlPicture).into(pictureImageView);
