@@ -1,4 +1,4 @@
-package com.yaniramonsalve.baricharaturistica
+package com.yaniramonsalve.baricharaturistica.list
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,9 +7,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
+import com.yaniramonsalve.baricharaturistica.R
+import com.yaniramonsalve.baricharaturistica.model.BaricharaItemItem
 
 class BaricharaAdapter(
-    private val baricharaList: ArrayList<BaricharaItemItem>
+    private val baricharaList: ArrayList<BaricharaItemItem>,
+    private val onItemClicked: (BaricharaItemItem) -> Unit,
     ) : RecyclerView.Adapter<BaricharaAdapter.BaricharaViewHolder>()  {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaricharaViewHolder {
@@ -19,6 +22,7 @@ class BaricharaAdapter(
 
     override fun onBindViewHolder(holder: BaricharaViewHolder, position: Int) {
         val barichara = baricharaList[position]
+        holder.itemView.setOnClickListener { onItemClicked(baricharaList[position]) }
         holder.bind(barichara)
     }
 

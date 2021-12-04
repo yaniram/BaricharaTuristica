@@ -1,10 +1,16 @@
-package com.yaniramonsalve.baricharaturistica
+package com.yaniramonsalve.baricharaturistica.list
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
+import com.yaniramonsalve.baricharaturistica.R
+import com.yaniramonsalve.baricharaturistica.detalle.DetalleActivity
+import com.yaniramonsalve.baricharaturistica.model.BaricharaItem
+import com.yaniramonsalve.baricharaturistica.model.BaricharaItemItem
 
 class ListBaricharaActivity : AppCompatActivity() {
 
@@ -22,7 +28,7 @@ class ListBaricharaActivity : AppCompatActivity() {
        // listBarichara = createMockBarichara()
         listBarichara = loadMockbaricharaturisticaFromJson()
 
-        baricharaAdapter = BaricharaAdapter(listBarichara)
+        baricharaAdapter = BaricharaAdapter(listBarichara, onItemClicked = { onBaricharaItemClicked(it) })
 
         baricharaRecyclerView.apply {
             layoutManager = LinearLayoutManager (context)
@@ -30,6 +36,13 @@ class ListBaricharaActivity : AppCompatActivity() {
             setHasFixedSize(false)
 
         }
+
+    }
+
+    private fun onBaricharaItemClicked(barichara: BaricharaItemItem) {
+        val intent = Intent(this, DetalleActivity::class.java)
+        intent.putExtra("barichara",barichara)
+        startActivity(intent)
 
     }
 

@@ -14,7 +14,7 @@
         android:theme="@style/Theme.BaricharaTuristica"
         tools:ignore="AllowBackup">
         <activity
-            android:name=".ListBaricharaActivity"
+            android:name=".list.ListBaricharaActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,11 +22,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name=".MainActivity_Bioparque"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".detalle.DetalleActivity"
             android:exported="true">
 
         </activity>
