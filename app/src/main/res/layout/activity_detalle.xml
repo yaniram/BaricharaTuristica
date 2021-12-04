@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity_Bioparque">
+    tools:context=".detalle.DetalleActivity">
 
     <!--    <ImageButton
             android:id="@+id/imageButton2"
@@ -29,7 +29,7 @@
             app:srcCompat="@android:drawable/btn_dialog" />  -->
 
     <TextView
-        android:id="@+id/bioparque"
+        android:id="@+id/name_text_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -70,7 +70,7 @@
 
 
                     <ImageView
-                        android:id="@+id/imageView5"
+                        android:id="@+id/picture_image_view"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
@@ -80,7 +80,7 @@
                         app:srcCompat="@drawable/bioparque_moncora_img1" />
 
                     <TextView
-                        android:id="@+id/textViewCaminoRealDescripcionPg1"
+                        android:id="@+id/description_place_view"
                         android:layout_width="wrap_content"
                         android:layout_height="550dp"
                         android:layout_gravity="center_vertical"
