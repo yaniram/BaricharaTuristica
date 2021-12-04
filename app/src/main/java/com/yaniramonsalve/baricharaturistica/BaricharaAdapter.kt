@@ -29,11 +29,13 @@ class BaricharaAdapter(
     class BaricharaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         private var nameTextView: TextView = itemView.findViewById(R.id.name_text_view)
         private var descriptionTextView: TextView = itemView.findViewById(R.id.description_place_view)
+       // private var valorationTextView: TextView = itemView.findViewById(R.id.)
         private var pictureImageView: ImageView = itemView.findViewById(R.id.picture_image_view)
 
         fun bind(barichara : BaricharaItemItem){
             nameTextView.text = barichara.name
             descriptionTextView.text = barichara.introduction
+           // valorationTextView.text = barichara.valoration.toString()
             Picasso.get().load(barichara.urlPicture).into(pictureImageView);
 
         }

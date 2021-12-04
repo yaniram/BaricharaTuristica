@@ -11,5 +11,5 @@ data class BaricharaItemItem(
     @SerializedName("urlPicture")
     val urlPicture: String,
     @SerializedName("valoration")
-    val valoration: String
+    val valoration: Double
 )
