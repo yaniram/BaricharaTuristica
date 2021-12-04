@@ -7,8 +7,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
-import com.yaniramonsalve.baricharaturistica.model.BaricharaItemItem
 import com.yaniramonsalve.baricharaturistica.R
+import com.yaniramonsalve.baricharaturistica.model.BaricharaItemItem
 
 class BaricharaAdapter(
     private val BaricharaList: ArrayList<BaricharaItemItem>,

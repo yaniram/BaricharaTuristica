@@ -1,13 +1,15 @@
 package com.yaniramonsalve.baricharaturistica.list
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
+import com.yaniramonsalve.baricharaturistica.R
+import com.yaniramonsalve.baricharaturistica.detalle.DetalleActivity
 import com.yaniramonsalve.baricharaturistica.model.BaricharaItem
 import com.yaniramonsalve.baricharaturistica.model.BaricharaItemItem
-import com.yaniramonsalve.baricharaturistica.R
 
 class ListBaricharaActivity : AppCompatActivity() {
 
@@ -37,6 +39,9 @@ class ListBaricharaActivity : AppCompatActivity() {
     }
 
     private fun onBaricharaClicked(barichara: BaricharaItemItem) {
+        val intent = Intent(this, DetalleActivity::class.java)
+        intent.putExtra("barichara", barichara)
+        startActivity(intent)
 
     }
 
