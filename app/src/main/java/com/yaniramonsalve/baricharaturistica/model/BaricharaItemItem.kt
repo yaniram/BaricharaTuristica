@@ -5,8 +5,8 @@ import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
 data class BaricharaItemItem(
-    @SerializedName("descripcionLarga")
-    val descripcionLarga: String,
+    @SerializedName("description")
+    val description: String,
     @SerializedName("introduction")
     val introduction: String,
     @SerializedName("name")
@@ -15,4 +15,4 @@ data class BaricharaItemItem(
     val urlPicture: String,
     @SerializedName("valoration")
     val valoration: Double
-): Serializable
+) : Serializable
