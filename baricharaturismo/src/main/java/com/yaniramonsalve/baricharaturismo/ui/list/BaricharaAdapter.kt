@@ -1,5 +1,6 @@
-package com.yaniramonsalve.baricharaturistica.list
+package com.yaniramonsalve.baricharaturismo.list
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,8 +8,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
-import com.yaniramonsalve.baricharaturistica.R
-import com.yaniramonsalve.baricharaturistica.model.BaricharaItemItem
+import com.yaniramonsalve.baricharaturismo.R
+import com.yaniramonsalve.baricharaturismo.model.BaricharaItemItem
+
 
 class BaricharaAdapter(
     private val BaricharaList: ArrayList<BaricharaItemItem>,
@@ -28,6 +30,12 @@ class BaricharaAdapter(
 
     override fun getItemCount(): Int {
         return BaricharaList.size
+    }
+
+    fun appendItems(newItems: ArrayList<BaricharaItemItem>) {
+        BaricharaList.clear()
+        BaricharaList.addAll(newItems)
+        notifyDataSetChanged()
     }
 
     class BaricharaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
