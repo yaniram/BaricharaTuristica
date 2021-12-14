@@ -11,7 +11,9 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
-import com.yaniramonsalve.baricharaturismo.drawer.databinding.ActivityDrawerBinding
+import com.yaniramonsalve.baricharaturismo.R
+import com.yaniramonsalve.baricharaturismo.databinding.ActivityDrawerBinding
+
 
 class DrawerActivity : AppCompatActivity() {
 
